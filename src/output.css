@@ -8,9 +8,13 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-shadow-grey: #252323;
@@ -18,6 +22,7 @@
     --color-slate-grey: #70798C;
     --color-frozen-lake: #89DAFF;
     --color-parchment: #F5F1ED;
+    --color-emerald: #58BC82;
   }
 }
 @layer base {
@@ -217,6 +222,9 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
@@ -224,8 +232,26 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-black {
+    border-color: var(--color-black);
+  }
+  .border-emerald {
+    border-color: var(--color-emerald);
+  }
+  .border-frozen-lake {
+    border-color: var(--color-frozen-lake);
+  }
+  .border-parchment {
+    border-color: var(--color-parchment);
+  }
+  .border-slate-grey {
+    border-color: var(--color-slate-grey);
+  }
   .bg-charcoal {
     background-color: var(--color-charcoal);
+  }
+  .bg-parchment {
+    background-color: var(--color-parchment);
   }
   .bg-shadow-grey {
     background-color: var(--color-shadow-grey);
@@ -233,11 +259,23 @@
   .bg-slate-grey {
     background-color: var(--color-slate-grey);
   }
+  .p-1 {
+    padding: var(--spacing);
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -259,6 +297,35 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  @media (hover: hover) {
+    .hover\:border-frozen-lake:hover {
+      border-color: var(--color-frozen-lake);
+    }
+    .hover\:bg-frozen-lake:hover {
+      background-color: var(--color-frozen-lake);
+    }
+    .hover\:bg-parchment:hover {
+      background-color: var(--color-parchment);
+    }
+    .hover\:bg-slate-grey:hover {
+      background-color: var(--color-slate-grey);
+    }
+    .hover\:text-emerald:hover {
+      color: var(--color-emerald);
+    }
+    .hover\:text-parchment:hover {
+      color: var(--color-parchment);
+    }
   }
   @media (width >= 48rem) {
     .md\:mb-0 {
@@ -344,6 +411,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -363,6 +434,7 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
+      --tw-ease: initial;
     }
   }
 }
