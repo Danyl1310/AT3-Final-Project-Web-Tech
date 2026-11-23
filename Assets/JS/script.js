@@ -15,3 +15,10 @@ dom.addEventListener(`click`, (e) => {
     }
 });
 
+
+//Top Button logic
+const toTop = dom.getElementById(`toTop`)
+
+top.addEventListener(`click`, () => {
+    window.scrollTo({ top:0, behavior: `smooth` });
+});
