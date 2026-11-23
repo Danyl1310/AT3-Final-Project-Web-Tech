@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="fontawesome" href="./Assets/fonts/Font Awesome/css/fontawesome.min.css">
+    <script src="./Assets/js/script.js" defer></script>
     <link rel="stylesheet" href="./src/output.css">
     <title>Dashboard</title>
 </head>
@@ -14,7 +15,25 @@
             <h1 class="text-xl hover:text-parchment transition ease-in-out">Cert IV Web Dev Portfolio</h1>
         </a>
         <nav class="flex gap-8 px-8">
-            <button class="bg-charcoal text-parchment px-8 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm">Menu</button>
+            <div>
+                <button id="menuBtn" class="bg-charcoal text-parchment px-4 py-4 w-45 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm text-left">
+                    Menu
+                </button>
+                <ul id="menu" class="absolute top-full bg-slate-grey right-0 w-45 -translate-x-35/32 -translate-y-1/8 hidden">
+                    <li class="block px-4 py-3 shadow">
+                        <a href="#" class="text-parchment hover:text-frozen-lake">Dashboard</a>
+                    </li>
+                    <li class="block px-4 py-3 shadow">
+                        <a href="#" class="text-parchment hover:text-frozen-lake">My Work</a>
+                    </li>
+                    <li class="block px-4 py-3 shadow">
+                        <a href="#" class="text-parchment hover:text-frozen-lake">Resume</a>
+                    </li>
+                    <li class="block px-4 py-3 shadow">
+                        <a href="#" class="text-parchment hover:text-frozen-lake">Contact</a>
+                    </li>
+                </ul>
+            </div>
             <button class="bg-charcoal text-parchment px-8 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm">About</button>
         </nav>
     </header>
