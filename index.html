@@ -16,7 +16,7 @@
         </a>
         <nav class="flex gap-8 px-8">
             <div>
-                <button id="menuBtn" class="bg-charcoal text-parchment px-4 py-4 w-45 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm text-left">
+                <button id="menuBtn" class="bg-graphite text-parchment px-4 py-4 w-45 border-2 border-charcoal hover:text-emerald hover:border-frozen-lake rounded-sm text-left">
                     Menu
                 </button>
                 <ul id="menu" class="absolute top-full bg-slate-grey right-0 w-45 -translate-x-35/32 -translate-y-1/8 hidden">
@@ -34,18 +34,43 @@
                     </li>
                 </ul>
             </div>
-            <button class="bg-charcoal text-parchment px-8 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm">About</button>
+            <button class="bg-graphite text-parchment px-8 border-2 border-charcoal hover:text-emerald hover:border-frozen-lake rounded-sm">About</button>
         </nav>
     </header>
     <main class="bg-charcoal text-parchment w-5/6 mx-auto min-h-screen p-6 border-x-2 border-shadow-grey">
-        <article>
-            <h2 class="text-xl">This is the Web Tech Portfolio Main Page.</h2>
-            <p class="text-md">Information goes here..</p>
+        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2">
+            <h2 class="text-2xl md:mb-8 text-frozen-lake">This is the Web Tech Portfolio Main Page.</h2>
+            <p class="text-xl md:mb-4 text-parchment">
+                This is the dashboard or main page, for my AT3 Submission. This project is for the final 
+                Assessment of my Web Tech Unit (AT3), it contains all sorts of information. The following 
+                is some information this website may include:
+            </p>
+            <ul class="list-disc pl-6 text-md text-parchment md:mb-4">
+                <li>Info and Links to previous projects.</li>
+                <li>Information About myself.</li>
+                <li>Resume Information.</li>
+            </ul>
+            <p class="text-xl">
+                Below are cards, that can be clicked to navigate to the other pages. (When on other pages you can use the "menu" dropdown at the top).
+            </p>
+        </article>
+        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2">
+            <h2 class="text-2xl md:mb-8 text-frozen-lake">Pages</h2>
+            <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <a href="#" class=" overflow-hidden block rounded-lg border border-slate-grey shadow-sm shadow-frozen-lake hover:shadow-lg transition">
+                    <h3 class="text-2xl bg-shadow-grey border-b-1 border-frozen-lake p-4">About</h3>
+                    <p class="bg-charcoal p-2 border-b-2 border-shadow-grey">The about page.</p>
+                    <img class="p-0" alt="Card Image" src="https:placehold.co/640x360">
+                    <footer class="flex bg-charcoal p-2 mx-auto border-t-2 border-shadow-grey">
+                        <p class="flex mx-auto">Click to view.</p>
+                    </footer>
+                </a>
+            </section>
         </article>
     </main>
     <footer class="bottom-0 flex flex-cols p-6 justify-between mx-auto md:flex-row gap-6 bg-shadow-grey text-frozen-lake items-center w-full">
         <h4 class="text-sm hover:text-black transition ease-in-out">© 2026 Daniel Cummings, All rights reserved.</h4>
-        <button id="toTop" class="bg-charcoal text-parchment px-4 py-1 border border-slate-grey rounded-lg hover:text-emerald hover:border-frozen-lake justify-self-center -translate-x-14">Top ^</button>
+        <button id="toTop" class="bg-graphite text-parchment px-4 py-1 border-2 border-charcoal rounded-lg hover:text-emerald hover:border-frozen-lake justify-self-center -translate-x-14">Top ^</button>
         <nav class="flex items-center justify-self-end gap-8 px-8">
             <a class="hover:text-parchment transition ease-in-out" href="#">Copyright</a>
             <p>|</p>
