@@ -10,46 +10,48 @@
 </head>
 <body class="bg-slate-grey">
     <header class="sticky top-0 flex flex-col justify-between p-6 mx-auto md:flex-row gap-6 bg-shadow-grey text-frozen-lake border-b-1 border-frozen-lake">
-        <a href="#" class="flex items-center mb-4 md:mb-0 gap-6">
+        <a href="./index.html" class="flex items-center mb-4 md:mb-0 gap-6">
             <img rel="logo" src="https://placehold.co/50x50">
             <h1 class="text-xl hover:text-parchment transition ease-in-out">Cert IV Web Dev Portfolio</h1>
         </a>
         <nav class="flex gap-8 px-8">
-            <div>
-                <button id="menuBtn" class="bg-charcoal text-parchment px-4 py-4 w-45 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm text-left">
+            <div class="relative inline-block">
+                <button id="menuBtn" class="bg-graphite text-parchment px-4 py-4 w-45 border-2 border-charcoal hover:text-emerald hover:border-frozen-lake rounded-sm text-left">
                     Menu
                 </button>
-                <ul id="menu" class="absolute top-full bg-slate-grey right-0 w-45 -translate-x-35/32 -translate-y-1/8 hidden">
+                <ul id="menu" class="absolute top-full bg-slate-grey right-0 w-45 hidden">
                     <li class="block px-4 py-3 shadow">
-                        <a href="#" class="text-parchment hover:text-frozen-lake">Dashboard</a>
+                        <a href="./index.html" class="text-parchment hover:text-frozen-lake">Dashboard</a>
                     </li>
                     <li class="block px-4 py-3 shadow">
-                        <a href="#" class="text-parchment hover:text-frozen-lake">My Work</a>
+                        <a href="./mywork.html" class="text-parchment hover:text-frozen-lake">My Work</a>
                     </li>
                     <li class="block px-4 py-3 shadow">
-                        <a href="#" class="text-parchment hover:text-frozen-lake">Resume</a>
+                        <a href="./resume.html" class="text-parchment hover:text-frozen-lake">Resume</a>
                     </li>
                     <li class="block px-4 py-3 shadow">
-                        <a href="#" class="text-parchment hover:text-frozen-lake">Contact</a>
+                        <a href="./contact.html" class="text-parchment hover:text-frozen-lake">Contact</a>
                     </li>
                 </ul>
             </div>
-            <button class="bg-charcoal text-parchment px-8 border border-slate-grey hover:text-emerald hover:border-frozen-lake rounded-sm">About</button>
+            <a href="./about.html" class="bg-graphite inline-flex items-center text-parchment px-8 border-2 border-charcoal hover:text-emerald hover:border-frozen-lake rounded-sm">About</a>
         </nav>
     </header>
     <main class="bg-charcoal text-parchment w-5/6 mx-auto min-h-screen p-6 border-x-2 border-shadow-grey">
-        <article>
-            <h2 class="text-xl">This is the Web Tech Portfolio Main Page.</h2>
-            <p class="text-md">Information goes here..</p>
+        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2">
+            <h2 class="text-2xl md:mb-8 text-frozen-lake">This is the Web Tech Portfolio Resume Page</h2>
+            <p class="text-xl md:mb-4 text-parchment">
+                Resume page info goes here..
+            </p>
         </article>
     </main>
     <footer class="bottom-0 flex flex-cols p-6 justify-between mx-auto md:flex-row gap-6 bg-shadow-grey text-frozen-lake items-center w-full">
         <h4 class="text-sm hover:text-black transition ease-in-out">© 2026 Daniel Cummings, All rights reserved.</h4>
-        <button id="toTop" class="bg-charcoal text-parchment px-4 py-1 border border-slate-grey rounded-lg hover:text-emerald hover:border-frozen-lake justify-self-center -translate-x-14">Top ^</button>
+        <button id="toTop" class="bg-graphite text-parchment px-4 py-1 border-2 border-charcoal rounded-lg hover:text-emerald hover:border-frozen-lake justify-self-center -translate-x-14">Top ^</button>
         <nav class="flex items-center justify-self-end gap-8 px-8">
-            <a class="hover:text-parchment transition ease-in-out" href="#">Copyright</a>
+            <a class="hover:text-parchment transition ease-in-out" href="./copyright.html">Copyright</a>
             <p>|</p>
-            <a class="hover:text-parchment transition ease-in-out" href="#">Contact</a>
+            <a class="hover:text-parchment transition ease-in-out" href="./contact.html">Contact</a>
         </nav>
     </footer>
 </body>
