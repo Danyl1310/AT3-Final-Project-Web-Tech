@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="fontawesome" href="./Assets/fonts/Font Awesome/css/fontawesome.min.css">
     <script src="./Assets/js/script.js" defer></script>
+    <script src="./Assets/js/contact.js" defer></script>
     <link rel="stylesheet" href="./src/output.css">
     <title>Dashboard</title>
 </head>
@@ -40,27 +41,43 @@
     <main class="bg-charcoal text-parchment w-5/6 mx-auto min-h-screen p-6 border-x-2 border-shadow-grey">
         <article class="block px-4 shadow-xl gap-2 bg-graphite p-4">
             <h2 class="text-2xl md:mb-8 text-frozen-lake p-2">Contact Us</h2>
-            <form class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-4 px-20">
-                <p class="text-xl text-parchment">First-name:</p>
-                <input type="text" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
-                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
-                <p class="text-xl text-parchment">Last-name:</p>
-                <input type="text" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
-                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
-                <p class="text-xl text-parchment">Email:</p>
-                <input type="email" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
-                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
-                <p class="text-xl text-parchment">Message:</p>
-                <textarea class="min-h-40 rounded-md border border-slate-grey bg-charcoal px-3 py-2 
-                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+            <form id="contact-form" novalidate class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-4 px-20">
+                <label for="firstName" class="text-xl text-parchment">First-name:</label>
+                <div>
+                    <input id="firstName" type="text" class="w-full rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                    text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                    <p id="firstName-error" class="mt-1 text-sm text-red-500"></p>
+                </div>
+                
+                <label for="lastName" class="text-xl text-parchment">Last-name:</label>
+                <div>
+                    <input id="lastName" type="text" class="w-full rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                    text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                    <p id="lastName-error" class="mt-1 text-sm text-red-500"></p>
+                </div>
 
-                </textarea>
+                <label for="email" class="text-xl text-parchment">Email:</label>
+                <div>
+                    <input id="email" type="email" class="w-full rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                    text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                    <p id="email-error" class="mt-1 text-sm text-red-500"></p>
+                </div>
+
+                <label for="message" class="text-xl text-parchment">Message:</label>
+                <div>
+                    <textarea id="message" class="w-full min-h-40 rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                    text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake"></textarea>
+                    <p id="message-error" class="mt-1 text-sm text-red-500"></p>
+                </div>
+
                 <div class="col-start-2 flex justify-end gap-4">
-                    <button class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
+                    <button type="submit" class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
                     px-10 py-2 hover:text-emerald hover:border-frozen-lake">Send</button>
-                    <button class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
+                    <button type="reset" class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
                     px-10 py-2 hover:text-emerald hover:border-frozen-lake">Cancel</button>
                 </div>
+
+                <p id="form-success" class="col-start-2 text-frozen-lake"></p>
             </form>
         </article>
     </main>
