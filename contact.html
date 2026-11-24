@@ -38,11 +38,30 @@
         </nav>
     </header>
     <main class="bg-charcoal text-parchment w-5/6 mx-auto min-h-screen p-6 border-x-2 border-shadow-grey">
-        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2">
-            <h2 class="text-2xl md:mb-8 text-frozen-lake">This is the Web Tech Portfolio Contact Page</h2>
-            <p class="text-xl md:mb-4 text-parchment">
-                Contact Page Info goes here...
-            </p>
+        <article class="block px-4 shadow-xl gap-2 bg-graphite p-4">
+            <h2 class="text-2xl md:mb-8 text-frozen-lake p-2">Contact Us</h2>
+            <form class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-4 px-20">
+                <p class="text-xl text-parchment">First-name:</p>
+                <input type="text" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                <p class="text-xl text-parchment">Last-name:</p>
+                <input type="text" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                <p class="text-xl text-parchment">Email:</p>
+                <input type="email" class="rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+                <p class="text-xl text-parchment">Message:</p>
+                <textarea class="min-h-40 rounded-md border border-slate-grey bg-charcoal px-3 py-2 
+                text-parchment placeholder-slate-grey focus:border-frozen-lake focus:ring-1 focus:ring-frozen-lake">
+
+                </textarea>
+                <div class="col-start-2 flex justify-end gap-4">
+                    <button class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
+                    px-10 py-2 hover:text-emerald hover:border-frozen-lake">Send</button>
+                    <button class="inline-block text-parchment rounded-xs border border-slate-grey bg-charcoal 
+                    px-10 py-2 hover:text-emerald hover:border-frozen-lake">Cancel</button>
+                </div>
+            </form>
         </article>
     </main>
     <footer class="bottom-0 flex flex-cols p-6 justify-between mx-auto md:flex-row gap-6 bg-shadow-grey text-frozen-lake items-center w-full">
