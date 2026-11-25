@@ -60,4 +60,4 @@ form.addEventListener(`reset`, () => {
         input.classList.add(`border-slate-grey`);
     });
     dom.querySelector(`#form-success`).textContent = ``;
-})
+});

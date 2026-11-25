@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="fontawesome" href="./Assets/fonts/Font Awesome/css/fontawesome.min.css">
+    <link rel="fontawesome" href="./Assets/fonts/font-awesome/css/fontawesome.min.css">
     <script src="./Assets/js/script.js" defer></script>
+    <script src="./Assets/JS/ninja-api.js" defer></script>
     <link rel="stylesheet" href="./src/output.css">
     <title>Dashboard</title>
 </head>
@@ -24,7 +25,7 @@
                         <a href="./index.html" class="text-parchment hover:text-frozen-lake">Dashboard</a>
                     </li>
                     <li class="block px-4 py-3 shadow">
-                        <a href="./mywork.html" class="text-parchment hover:text-frozen-lake">My Work</a>
+                        <a href="./projects.html" class="text-parchment hover:text-frozen-lake">Projects</a>
                     </li>
                     <li class="block px-4 py-3 shadow">
                         <a href="./resume.html" class="text-parchment hover:text-frozen-lake">Resume</a>
@@ -38,15 +39,39 @@
         </nav>
     </header>
     <main class="bg-charcoal text-parchment w-5/6 mx-auto min-h-screen p-6 border-x-2 border-shadow-grey">
-        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2">
-            <h2 class="text-2xl md:mb-8 text-frozen-lake">This is the Web Tech Portfolio My Work Page</h2>
+        <a href="./projects.html" class="text-xl text-parchment px-6 py-2 rounded-sm border-2 border-shadow-grey bg-graphite mt-8 mb-10 hover:border-frozen-lake hover:text-emerald">Back to Projects</a>
+        <article class="block px-4 shadow-xl gap-2 bg-graphite p-2 mt-4">
+            <h2 class="text-2xl md:mb-8 text-frozen-lake">Ninja API</h2>
             <p class="text-xl md:mb-4 text-parchment">
-                My work page info goes here..
+                The following is a form which uses Ninja API to generate content.
             </p>
+        </article>
+        <article id="apiForm" class="block px-4 shadow-xl gap-2 bg-graphite p-2 mt-4">
+            <form>
+                <h2>Ninja API App</h2><br>
+                <div class="bg-charcoal p-6">
+                    <h3 class="text-2xl text-emerald md:mb-4">Pick the from the following APIs!</h3>
+                    <input class="size-4" type="checkbox" name="API" id="jokeApi" value="#">
+                    <label for="jokeApi" class="px-2 text-xl text-parchment">Joke Generator</label><br>
+                    <input class="size-4" type="checkbox" name="API" id="barcodeApi" value="#">
+                    <label for="barcodeApi" class="px-2 text-xl text-parchment">QRCode Generator</label>
+                </div><br>
+                <div class="bg-charcoal p-6">
+                    <input class="w-full text-parchment text-xl rounded-md border border-slate-grey bg-charcoal 
+                    px-3 py-1" type="text" name="text-input" id="textInput" value="" 
+                    placeholder="Choose an API first!"><br>
+                    <button class="text-parchment text-xl rounded-sm border-2 border-slate-grey bg-charcoal px-6 
+                    py-2 mt-4 hover:text-emerald hover:border-frozen-lake" type="submit" id="submitButton">Submit</button>
+                </div><br>
+                <div class="bg-charcoal p-6 min-h-screen">
+                    <h3 class="text-parchment text-2xl">Results:</h3>
+                    <p class="text-parchment text-xl" id="results"></p>
+                </div>
+            </form>
         </article>
     </main>
     <footer class="bottom-0 flex flex-cols p-6 justify-between mx-auto md:flex-row gap-6 bg-shadow-grey text-frozen-lake items-center w-full">
-        <h4 class="text-sm hover:text-black transition ease-in-out">© 2026 Daniel Cummings, All rights reserved.</h4>
+        <h3 class="text-sm hover:text-black transition ease-in-out">© 2026 Daniel Cummings, All rights reserved.</h3>
         <button id="toTop" class="bg-graphite text-parchment px-4 py-1 border-2 border-charcoal rounded-lg hover:text-emerald hover:border-frozen-lake justify-self-center -translate-x-14">Top ^</button>
         <nav class="flex items-center justify-self-end gap-8 px-8">
             <a class="hover:text-parchment transition ease-in-out" href="./copyright.html">Copyright</a>

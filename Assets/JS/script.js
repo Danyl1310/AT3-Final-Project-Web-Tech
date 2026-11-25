@@ -17,7 +17,7 @@ dom.addEventListener(`click`, (e) => {
 
 
 //Top Button logic
-const toTop = dom.getElementById(`toTop`)
+const toTop = dom.getElementById(`toTop`);
 
 toTop.addEventListener(`click`, () => {
     window.scrollTo({ top:0, behavior: `smooth` });
